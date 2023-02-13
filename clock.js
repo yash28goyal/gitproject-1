@@ -4,6 +4,7 @@ a = new Date();
 hours = a.getHours();
 minute = a.getMinutes();
 second = a.getSeconds();
+am = a.getHours();
 if (hours > 12) {
     hours -= 12;
 } else if (hours == 0) {
@@ -17,6 +18,11 @@ if (minute < 10 ){
 }
 if (second < 10 ){
     second = "0" + second;
+}
+if (am > 12){
+    document.getElementById('ampm').innerHTML='PM';
+    // console.log("working");
+    // console.log(am);
 }
 document.getElementById('hours').innerHTML=hours;
 document.getElementById('minute').innerHTML=minute;
